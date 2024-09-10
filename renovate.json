@@ -10,8 +10,10 @@
                 "(^|/)Dockerfile\\.[^/]*$"
             ],
             "matchStrings": [
-                "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s(?:ENV|ARG) .+?_VERSION=(?<currentValue>.+?)\\s"
-            ]
+                "ARG OPENSEARCH_VERSION=(?<currentValue>.+?)\\s"
+            ],
+            "datasourceTemplate": "github-releases",
+            "packageNameTemplate": "opensearch-project/OpenSearch"
         }
     ],
     "enabledManagers": [
